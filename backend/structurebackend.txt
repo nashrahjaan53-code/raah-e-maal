@@ -1,0 +1,44 @@
+our structure for backend using python:
+backend/
+│
+├── app/
+│   ├── main.py                # FastAPI app entry
+│   ├── config.py              # environment configs
+│   ├── api/                   # API routes (Layer 2)
+│   │   ├── user_routes.py
+│   │   ├── loan_routes.py
+│   │   ├── simulation_routes.py
+│   │   └── recommendation_routes.py
+│   ├── services/              # Business logic (Layer 3)
+│   │   ├── loan_service.py
+│   │   ├── simulation_service.py
+│   │   └── recommendation_service.py
+│   ├── intelligence/          # Decision intelligence (Layer 4)
+│   │   ├── risk_model.py
+│   │   ├── loan_optimizer.py
+│   │   └── financial_forecast.py
+│   ├── models/                # Database models
+│   │   ├── user_model.py
+│   │   └── loan_model.py
+│   ├── schemas/               # API request/response validation
+│   │   ├── user_schema.py
+│   │   └── loan_schema.py
+│   ├── database/              # Database layer (Layer 5)
+│   │   ├── connection.py
+│   │   └── queries.py
+│   ├── utils/                 # Helper functions
+│   │   ├── emi_calculator.py
+│   │   └── financial_analysis.py
+│   └── security/              # authentication
+│       ├── jwt_handler.py
+│       └── password_hash.py
+├── requirements.txt
+├── run.py
+└── .gitignore
+Tech Stack 
+Backend:
+FastAPI
+PostgreSQL
+SQLAlchemy
+JWT Authentication
+Python

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+venv/
+.venv/
+.env
+loanpilot.db
+loanpilot_backup_*.db
+loanpilot_legacy_*.db
