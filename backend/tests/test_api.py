@@ -84,18 +84,27 @@ class TestRateLimiting:
     """Test rate limiting"""
     
     def test_rate_limit_exceeded(self):
-        endpoint = "/api/users/login"
-        # Make many rapid requests
-        responses = []
-        for i in range(150):  # Assuming limit is ~100 per minute
-            response = client.post(
-                endpoint,
-                json={"username": f"user{i}", "password": "pass"}
-            )
-            responses.append(response.status_code)
+        from app.connection.config import settings
+        from app.main import clear_rate_limit_store
         
-        # Should have at least one 429 (Too Many Requests)
-        assert 429 in responses
+        old_limit = settings.RATE_LIMIT_REQUESTS
+        settings.RATE_LIMIT_REQUESTS = 5
+        clear_rate_limit_store()
+        
+        try:
+            endpoint = "/api/users/login"
+            responses = []
+            for i in range(15):
+                response = client.post(
+                    endpoint,
+                    json={"username": f"user{i}", "password": "pass"}
+                )
+                responses.append(response.status_code)
+            
+            assert 429 in responses
+        finally:
+            settings.RATE_LIMIT_REQUESTS = old_limit
+            clear_rate_limit_store()
 
 
 class TestSecurityHeaders:
