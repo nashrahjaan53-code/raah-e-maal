@@ -25,7 +25,7 @@ An apple grower in Shopian earns most of his income across a few autumn weeks. A
 
 Their EMIs are still due every month. Winter costs still arrive every year. Every financial app on their phone still assumes a fixed monthly salary.
 
-**That mismatch — not lack of income, but lack of a plan that understands seasonal income — is what pushes financially capable people into missed payments and predatory borrowing.**
+**That mismatch not lack of income, but lack of a plan that understands seasonal income — is what pushes financially capable people into missed payments and predatory borrowing.**
 
 ## The Solution
 
@@ -44,10 +44,10 @@ Their EMIs are still due every month. Winter costs still arrive every year. Ever
 
 | | |
 |---|---|
-| **Real, underserved problem** | Not a generic budgeting app — built for a specific economic reality that mainstream fintech ignores |
+| **Real, underserved problem** | Not a generic budgeting app built for a specific economic reality that mainstream fintech ignores |
 | **Depth over breadth** | Every feature (KCC integration, winter fund, scheme recommender) maps to a real J&K livelihood, not a checklist |
-| **Genuinely localized** | Trilingual UI (EN/UR/KS), district-aware risk modeling, offline mode for NH-44 connectivity gaps — not translation as an afterthought |
-| **Scalable model** | The seasonal-income architecture generalizes to any region with agricultural, tourism, or gig-based economies — J&K is the proof of concept |
+| **Genuinely localized** | Trilingual UI (EN/UR/KS), district-aware risk modeling, offline mode for NH-44 connectivity gaps not translation as an afterthought |
+| **Scalable model** | The seasonal-income architecture generalizes to any region with agricultural, tourism, or gig-based economies J&K is the proof of concept |
 | **Shippable** | Full-stack, working end to end: FastAPI + SQLite backend, React/Vite frontend, live simulator, persistent user profiles |
 
 ---
